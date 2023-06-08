@@ -41,13 +41,13 @@ input, button, textarea, select {
     inline-size           : min-content;
     grid-template-columns : repeat(4, 1fr);
     grid-template-rows    : repeat(6, min-content);
-    gap                   : 0.65rem;
+    gap                   : 0.55rem;
     grid-template-areas   :
         "display display display display"
-        "clear   clear   divide   multiply"
-        "seven   eight   nine    subtract"
-        "four    five    six     add"
-        "one     two     three   equals"
+        "ce   ac   del   divide"
+        "seven   eight   nine    multiply"
+        "four    five    six     subtract"
+        "one     two     three   add"
         "zero    zero    decimal     equals";
 }
 
@@ -64,7 +64,7 @@ input, button, textarea, select {
 
 
     background-color : #333333;
-    border-radius    : 0.825rem;
+    border-radius    : 0.625rem;
     border           : none;
 }
 
@@ -75,6 +75,7 @@ input, button, textarea, select {
 
 .calculator__formula {
     color : #f1a33c;
+    min-height: 1.5rem;
 }
 
 .calculator__output {
@@ -82,7 +83,7 @@ input, button, textarea, select {
     font-size   : 2.25rem;
 }
 
-:is(#clear) {
+:is(#clear, #ce, #del) {
     color            : #000;
     background-color : #a5a5a5;
 }
@@ -91,12 +92,25 @@ input, button, textarea, select {
     background-color : #f1a33c;
 }
 
+:is(#equals) {
+    background-color : #fff;
+    color            : #000;
+}
+
 #display {
     grid-area : display;
 }
 
 #clear {
-    grid-area : clear;
+    grid-area : ac;
+}
+
+#ce {
+    grid-area : ce;
+}
+
+#del {
+    grid-area : del;
 }
 
 #divide {
