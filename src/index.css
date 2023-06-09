@@ -44,10 +44,10 @@ input, button, textarea, select {
     gap                   : 0.55rem;
     grid-template-areas   :
         "display display display display"
-        "ce   ac   del   divide"
-        "seven   eight   nine    multiply"
-        "four    five    six     subtract"
-        "one     two     three   add"
+        "ac   del   divide   multiply"
+        "seven   eight   nine    subtract"
+        "four    five    six     add"
+        "one     two     three   equals"
         "zero    zero    decimal     equals";
 }
 
@@ -83,7 +83,7 @@ input, button, textarea, select {
     font-size   : 2.25rem;
 }
 
-:is(#clear, #ce, #del) {
+:is(#clear, #clear, #del) {
     color            : #000;
     background-color : #a5a5a5;
 }
